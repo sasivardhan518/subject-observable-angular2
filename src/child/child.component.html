@@ -2,6 +2,11 @@
 <p>
   child works!
 </p>
-<input type="text" [(ngModel)]= "messageFromParent" (ngModelChange)="messageFromParentChange.emit(messageFromParent)" />
-
+<!-- <input type="text" [(ngModel)]= "messageFromParent" (ngModelChange)="messageFromParentChange.emit(messageFromParent)" /> -->
+<input type="text" [(ngModel)]= "messageFromParent" />
+<input type="text" [(ngModel)]="userFromParent.userName"/>
+<input type="text" [(ngModel)]="userFromParent.age"/>
+<input type="radio" name="gender-child" [(ngModel)]="userFromParent.gender" value="male"/>Male
+<input type="radio" name="gender-child" [(ngModel)]="userFromParent.gender" value="female"/>Female
+<button (click)="submit()">submit</button>
 </div>
