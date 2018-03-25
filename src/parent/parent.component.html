@@ -1,0 +1,5 @@
+<p>
+  parent works!
+</p>
+<input type="text" [(ngModel)]="message"/>
+<app-child [messageFromParent] = "message" (messageFromParentChange)="messageFromParentChanged($event)"></app-child>
