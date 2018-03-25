@@ -14,7 +14,7 @@ export class AppComponent {
   sendMessage() {
     this.sharedService.sendMessage('Hi this is shared component message.');
     this.sharedService.showProgressBar();
-    setTimeout(() => { this.sharedService.hideProgressBar(); }, 1000);
+    setTimeout(() => { this.sharedService.hideProgressBar(); }, 4000);
   }
   clearMessage() {
     this.sharedService.clearMessage();

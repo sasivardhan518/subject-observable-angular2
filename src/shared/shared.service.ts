@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Subject } from 'rxjs/Subject';
 import { Observable } from 'rxjs/Observable';
+import * as $ from 'jquery';
 
 @Injectable()
 export class SharedService {
@@ -21,11 +22,12 @@ getMessage(): Observable<any> {
 }
 
 showProgressBar() {
-  this.progressBarSubject.next(true);
+  this.progressBarSubject.next({isVisible: true, bodyHeight: $(document).height()});
 }
 
 hideProgressBar() {
-this.progressBarSubject.next(false);
+  const bodyHeight: number = $(document).height();
+this.progressBarSubject.next({isVisible: false, bodyHeight: bodyHeight});
 }
 
 progressBarStatus(): Observable<any> {
