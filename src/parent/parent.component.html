@@ -7,5 +7,5 @@
 <input type="radio" name="gender" [(ngModel)]="user.gender" value="male"/>Male
 <input type="radio" name="gender" [(ngModel)]="user.gender" value="female"/>Female
 <button (click)="submit()">submit</button>
-<!-- <app-child [messageFromParent] = "message" [userFromParent]="user" (messageFromParentChange)="messageFromParentChanged($event)"></app-child> -->
-<app-child [messageFromParent] = "message" [userFromParent]="user" ></app-child>
+<app-child [messageFromParent] = "message" [userFromParent]="user" (messageFromParentChange)="messageFromParentChanged($event)"></app-child>
+<!-- <app-child [messageFromParent] = "message" [userFromParent]="user" ></app-child> -->

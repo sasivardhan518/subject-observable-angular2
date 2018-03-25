@@ -10,7 +10,7 @@ import { User } from '../models/User';
 export class ChildComponent implements OnInit {
   @Input() userFromParent: User;
   @Input() messageFromParent: string;
-  // @Output() messageFromParentChange= new EventEmitter<string>();
+  @Output() messageFromParentChange= new EventEmitter<string>();
   constructor() {
     this.userFromParent = new User();
   }
